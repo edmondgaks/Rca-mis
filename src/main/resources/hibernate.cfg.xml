@@ -5,9 +5,9 @@
 <!--		<property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>-->
 		 
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/rcawebapp</property>
-		<property name="hibernate.connection.username">bruno</property>
-		<property name="hibernate.connection.password">Bruno@1980</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/rcamis</property>
+		<property name="hibernate.connection.username">edmond</property>
+		<property name="hibernate.connection.password">matwigari</property>
 		
 		<property name="hibernate.session_factory_name">SmisSessionFactory</property>
 		<property name="hibernate.connection.pool_size">1</property>

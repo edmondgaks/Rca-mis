@@ -53,10 +53,12 @@ public class UserDAOImpl extends DAO implements UserDAO {
 		try {
 			begin();
 			User usr = (User) getSession().save(user);
+
 			commit();
 			return usr;
 
 		} catch (Exception e) {
+			e.printStackTrace();
 			rollback();
 			return null;
 		}
