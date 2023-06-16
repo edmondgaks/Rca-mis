@@ -17,7 +17,7 @@
 		src="icons/application_side_expand.png" /> Students</a>
 	<ul class="noJS">
 		<li><a
-			href="liststudents.php?page=students&&user_role=adm&&action=list"><img
+				href="liststudents.php?page=students&&user_role=adm&&action=list"><img
 				src="icons/application_view_list.png" /> Students</a></li>
 		<li><a
 			href="listparents.php?page=parents&&user_role=adm&&action=list"><img
