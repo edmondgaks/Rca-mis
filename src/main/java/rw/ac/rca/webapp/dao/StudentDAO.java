@@ -12,4 +12,6 @@ public interface StudentDAO {
     public boolean deleteStudent(Student student);
     public Student getStudentById(int studentId);
     public List<Student> getAllStudent();
+
+    public Student searchStudentByName(String name);
 }

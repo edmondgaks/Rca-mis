@@ -97,4 +97,45 @@
     <servlet-name>ListEmployee</servlet-name>
     <url-pattern>/listemployee.php</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CreateParent</display-name>
+    <servlet-name>CreateParent</servlet-name>
+    <servlet-class>rw.ac.rca.webapp.web.CreateParent</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateParent</servlet-name>
+    <url-pattern>/createparent.php</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ListParent</display-name>
+    <servlet-name>ListParent</servlet-name>
+    <servlet-class>rw.ac.rca.webapp.web.ListParent</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListParent</servlet-name>
+    <url-pattern>/listparent.php</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <description></description>
+    <display-name>CreateMarks</display-name>
+    <servlet-name>CreateMarks</servlet-name>
+    <servlet-class>rw.ac.rca.webapp.web.CreateMarks</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateMarks</servlet-name>
+    <url-pattern>/createmarks.php</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ListMarks</display-name>
+    <servlet-name>ListMarks</servlet-name>
+    <servlet-class>rw.ac.rca.webapp.web.ListMarks</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListMarks</servlet-name>
+    <url-pattern>/listMarks.php</url-pattern>
+  </servlet-mapping>
 </web-app>

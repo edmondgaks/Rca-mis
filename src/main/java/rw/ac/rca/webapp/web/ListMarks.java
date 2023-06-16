@@ -1,10 +1,9 @@
 package rw.ac.rca.webapp.web;
-
-import rw.ac.rca.webapp.dao.ParentDAO;
-import rw.ac.rca.webapp.dao.impl.ParentDAOImpl;
-import rw.ac.rca.webapp.orm.Parent;
+import rw.ac.rca.webapp.dao.MarksDAO;
+import rw.ac.rca.webapp.dao.impl.MarksDAOImpl;
+import rw.ac.rca.webapp.orm.Course;
+import rw.ac.rca.webapp.orm.Marks;
 import rw.ac.rca.webapp.util.UserRole;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -13,42 +12,24 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
-
-/**
- * Servlet implementation class ListCourse
- */
-public class ListParent extends HttpServlet {
+public class ListMarks extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    private ParentDAO parentDAO = ParentDAOImpl.getInstance();
-
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public ListParent() {
+    private final MarksDAO marksDAO = MarksDAOImpl.getInstance();
+    public ListMarks() {
         super();
-        // TODO Auto-generated constructor stub
     }
-
-    /**
-     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-     */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // TODO Auto-generated method stub
         String pageRedirect = request.getParameter("page");
-        String pageRedirectRole = request.getParameter("user_role");
-
         HttpSession httpSession = request.getSession();
         Object user = httpSession.getAttribute("authenticatedUser");
         System.out.println("The user in session is: " + user);
-
         if (pageRedirect != null) {
-            if (pageRedirect.equals("parents") && request.getParameter("action").equals("list") && pageRedirectRole.equals("adm")) {
-
-                List<Parent> parents = parentDAO.getAllParents();
-                httpSession.setAttribute("parents", parents);
+            if (pageRedirect.equals("marks") && request.getParameter("action").equals("list")) {
+                List<Marks> marks = marksDAO.getAllMarks();
+                httpSession.setAttribute("marks", marks);
                 UserRole[] userRoles = UserRole.values();
                 httpSession.setAttribute("userRoles", userRoles);
-                request.getRequestDispatcher("WEB-INF/parent.jsp").forward(request, response);
+                request.getRequestDispatcher("WEB-INF/listMarks.jsp").forward(request , response);
             }
         } else {
             httpSession.setAttribute("error", "Invalid User. Try again!");
@@ -56,13 +37,7 @@ public class ListParent extends HttpServlet {
             dispatcher.forward(request, response);
         }
     }
-
-    /**
-     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // TODO Auto-generated method stub
         doGet(request, response);
     }
-
 }

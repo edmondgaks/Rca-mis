@@ -36,10 +36,10 @@
 <li><a class="idTabs" href="#marks"><img
 		src="icons/application_side_expand.png" /> Marks</a>
 	<ul class="noJS">
-		<li><a href="listmarks.php?page=marks&&action=list"><img
+		<li><a href="listMarks.php?page=marks&&action=list"><img
 				src="icons/application_view_list.png" /> Marks</a></li>
 		<li><a
-			href="listcourses.php?page=courses&&action=list"><img
+				href="listcourses.php?page=courses&&action=list"><img
 				src="icons/application_view_list.png" /> Courses</a></li>
 	</ul></li>
 

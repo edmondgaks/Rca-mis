@@ -97,7 +97,7 @@ public class CourseDAOImpl extends DAO implements CourseDAO {
 		}
 	}
 
-	@SuppressWarnings("unchecked")
+		@SuppressWarnings("unchecked")
 	public List<Course> getAllCourses() {
 		try {
 			begin();
@@ -105,6 +105,19 @@ public class CourseDAOImpl extends DAO implements CourseDAO {
 			List<Course> courses = query.list();
 			commit();
 			return courses;
+		} catch (Exception e) {
+			rollback();
+			return null;
+		}
+	}
+	public Course searchCourseByName(String name) {
+		try {
+			begin();
+			Query query = getSession().createQuery("from Course where name= :name");
+			query.setString("name", name);
+			Course course = (Course) query.uniqueResult();
+			commit();
+			return course;
 		} catch (Exception e) {
 			rollback();
 			return null;

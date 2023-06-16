@@ -40,5 +40,6 @@
 		<mapping class="rw.ac.rca.webapp.orm.EnrollmentLevel" />
 		<mapping class="rw.ac.rca.webapp.orm.AcademicYear" />
 		<mapping class="rw.ac.rca.webapp.orm.User" />
+		<mapping class="rw.ac.rca.webapp.orm.Employee" />
 	</session-factory>
 </hibernate-configuration>

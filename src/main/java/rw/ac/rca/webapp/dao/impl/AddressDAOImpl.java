@@ -4,6 +4,7 @@ import org.hibernate.Query;
 import rw.ac.rca.webapp.dao.AddressDAO;
 import rw.ac.rca.webapp.dao.CourseDAO;
 import rw.ac.rca.webapp.orm.Address;
+import rw.ac.rca.webapp.orm.Student;
 
 import java.util.List;
 
@@ -97,6 +98,19 @@ public class AddressDAOImpl extends DAO implements AddressDAO {
         }catch (Exception e){
             rollback();
             e.printStackTrace();
+            return null;
+        }
+    }
+    public Student searchStudentByName(String name) {
+        try {
+            begin();
+            Query query = getSession().createQuery("from Student where firstName= :name or lastName= :name");
+            query.setString("name", name);
+            Student student = (Student) query.uniqueResult();
+            commit();
+            return student;
+        } catch (Exception e) {
+            rollback();
             return null;
         }
     }
