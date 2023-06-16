@@ -77,4 +77,24 @@
     <servlet-name>ListStudent</servlet-name>
     <url-pattern>/liststudents.php</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CreateEmployee</display-name>
+    <servlet-name>CreateEmployee</servlet-name>
+    <servlet-class>rw.ac.rca.webapp.web.CreateEmployee</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateEmployee</servlet-name>
+    <url-pattern>/createemployee.php</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ListEmployee</display-name>
+    <servlet-name>ListEmployee</servlet-name>
+    <servlet-class>rw.ac.rca.webapp.web.ListEmployee</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListEmployee</servlet-name>
+    <url-pattern>/listemployee.php</url-pattern>
+  </servlet-mapping>
 </web-app>

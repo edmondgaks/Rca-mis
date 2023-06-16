@@ -8,12 +8,20 @@
 		<li><a href="listuser.php?page=users&&action=list"><img
 				src="icons/application_view_list.png" /> List of users</a></li>
 
-	</ul></li>
+	</ul>
+</li>
 <li><a
-	href="listemployees.php?page=employees&&user_role=adm&&action=list"><img
-		src="icons/application_view_columns.png" /> Employees</a></li>
+		href="#employees"><img
+		src="icons/application_side_expand.png" /> Employees</a>
+	<ul class="noJS">
+		<li><a
+				href="listemployee.php?page=employees&&action=list"><img
+				src="icons/application_view_list.png" /> employees</a></li>
+	</ul>
+</li>
 
-<li><a class="idTabs" href="#students"><img
+<li>
+	<a class="idTabs" href="#students"><img
 		src="icons/application_side_expand.png" /> Students</a>
 	<ul class="noJS">
 		<li><a
@@ -22,7 +30,8 @@
 		<li><a
 			href="listparents.php?page=parents&&user_role=adm&&action=list"><img
 				src="icons/application_view_list.png" /> Parents</a></li>
-	</ul></li>
+	</ul>
+</li>
 
 <li><a class="idTabs" href="#marks"><img
 		src="icons/application_side_expand.png" /> Marks</a>
