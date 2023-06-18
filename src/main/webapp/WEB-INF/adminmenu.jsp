@@ -1,5 +1,5 @@
-<li><a class="idTabs" href="#admin"><img
-		src="icons/application_side_expand.png" /> Admin</a>
+<li><a class="idTabs" href="#admin">
+	<img src="icons/application_side_expand.png" /> Admin</a>
 	<ul class="noJS">
 
 		<li><a href="createuser.php?page=createuser"><img

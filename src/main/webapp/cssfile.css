@@ -47,9 +47,9 @@ hr {
 
 #layout {
 	background-color: white;
-	margin: auto;
-	width: 1000px;
-	height: auto;
+	/*margin: auto;*/
+	width: 100%;
+	height: 100vh;
 	position: static;
 	margin-top: 0px;
 }
@@ -64,9 +64,9 @@ hr {
 }
 
 #banner {
-	background: url("images/banner_bg.png") repeat-x scroll left top transparent;
+	/*background: url("images/banner_bg.png") repeat-x scroll left top transparent;*/
 	height: 90px;
-	width: 1000px;
+	width: 100%;
 	font-style: normal;
 	border: 1px solid #ccc;
 	position: relative;
@@ -101,17 +101,35 @@ hr {
 	font-family: georgia;
 }
 
+
 #middle {
-	height: auto;
-	width: auto;
+	display: flex;
+	flex-direction: row;
+	height: 75vh;
+	width: 100%;
 	font-style: normal;
 	font-family: georgia;
-	margin-top: 1px;
-	background: #fff url("images/banner_bg.jpg") top repeat-x;
-	border: 1px solid #ccc;
-	border-style: solid solid solid solid;
+	margin-top: 5px;
+}
+#middle div {
+	width: 50%;
+	padding: 6px;
+
+}
+#middle div h1 {
+	font-size: 32px;
+	font-weight: bolder;
 }
 
+#middle img {
+	width: 50%;
+	height: 100%;
+}
+
+#stats {
+	display: flex;
+	flex-direction: column;
+}
 #nav {
 	background: #fff url("images/bg_image_nav.jpg") bottom repeat-x;
 	border: 1px solid #ccc;
@@ -262,14 +280,17 @@ button:HOVER {
 ------------------------------------------*/
 #menu {
 	font-family: Arial;
-	font-size: 12px;
+	font-size: 16px;
 	width: 100%;
 	border: 1px solid #ccc;
+	display: flex;
+	align-content: center;
+	justify-content: center;
 	border-style: solid none solid none;
 	float: left;
-	margin-top: 1px;
-	margin-bottom: 1px;
-	background: #fff url("images/bg_image_nav.jpg") bottom repeat-x;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	/*background: #fff url("images/bg_image_nav.jpg") bottom repeat-x;*/
 	padding: 2px 0px 2px 0px;
 }
 
@@ -440,3 +461,5 @@ fieldset{
   padding: 1px 5px 0 15px;
   background: #008dd4 url("images/star.png") left top no-repeat;
 }
+
+

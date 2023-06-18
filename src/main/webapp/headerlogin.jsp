@@ -20,3 +20,6 @@
 		<div id="bannerlogin">
 			<div class="text_header_login">Rwanda Coding Academy</div>
 		</div>
+	</div>
+</body>
+</html>

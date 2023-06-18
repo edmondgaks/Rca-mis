@@ -19,3 +19,6 @@
 		<div id="bannerlogin">
 			<div class="text_header_login">SMIS</div>
 		</div>
+	</div>
+</body>
+</html>
